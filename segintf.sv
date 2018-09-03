@@ -3,15 +3,14 @@
 `define SEGINTF__SV
 
 interface segintf (input bit clk);
-logic en;
-logic [2:0] segin;
+bit en;
+bit [2:0] segin;
 logic [6:0] segout; 
 
 clocking ct @(posedge clk);
  output segin,en;
- input segout;
  endclocking:ct
-modport DUT ( clocking ct, input clk);
+modport DUT ( clocking ct, input clk,segout);
 
  clocking cr @(posedge clk);
   output segout;

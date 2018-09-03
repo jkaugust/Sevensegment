@@ -2,44 +2,35 @@
 `ifndef MONITOR__SV
 `define MONITOR__SV
 
-`include "uni_cell.sv"
-
-
-typedef class monitor;
-
-class monitor_cbs;
-   virtual task post_rx(input Monitor mon,
-		        input NNI_cell c);
-   endtask : post_rx
-endclass : monitor_cbs
 
 class monitor;
-
-   virtual segintf vdt;		// Virtual interface with output of DUT
-   Monitor_cbs cbsq[$];		// Queue of callback objects
-
-   extern function new(input vUtopiaTx Tx);
-   extern task run();
-   extern task receive (output NNI_cell c);
+  virtual segintf.TEST vTEST; 
+  mailbox mon2scb;
+  logic [6:0] outrcv;
+  
+  function new(mailbox mon2scb,virtual segintf.TEST vTEST); 
+     this.vTEST = vTEST; 
+     if(mon2scb == null) 
+       begin 
+         $display(" **ERROR**: mon2scb is null"); 
+         $finish; 
+       end 
+       else 
+       this.mon2scb = mon2scb; 
+  endfunction : new 
+  
+  task run();
+    forever begin
+      wait(vTEST.cr.segout)
+      outrcv <= vTEST.cr.segout;
+      $display(" %0d : Receiver : Received a segout %0d",$time,outrcv);
+      mon2scb.put(outrcv); 
+      outrcv <= 7'b0000000; 
+    end
+   endtask : run
+    
 endclass : monitor
 
-function monitor::new(input vUtopiaTx Tx);
-   this.Tx     = Tx;
-endfunction : new
-
-task monitor::run();
-   uni_cell c;
-      
-   forever begin
-      receive(c);
-      foreach (cbsq[i])
-	cbsq[i].post_rx(this, c); 	 // Post-receive callback
-   end
-endtask : run
-
-task monitor::receive(output uni_cell c);
-   c = new();   
-endtask : receive
 
 `endif // MONITOR__SV
 

@@ -14,7 +14,7 @@ logic clk;
   end
   segintf sntf(clk);
   sevenseg svnsg(sntf.DUT);
-  test tst (sntf.TEST,clk); 
+  test tst (sntf.TEST); 
 endmodule:top
  
 `endif // TOP__SV
