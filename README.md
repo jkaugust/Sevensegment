@@ -1,2 +1,2 @@
 # Sevensegment
-Sytemverilog testing of sevensegment
+Systemverilog testing of sevensegment
