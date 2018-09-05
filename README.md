@@ -1,2 +1,2 @@
-# Sevensegment
-Systemverilog testing of sevensegment
+# Seven Segment Display
+Design and Verification of Seven Segment Display using SystemVerilog
