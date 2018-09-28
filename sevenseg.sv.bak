@@ -1,9 +1,9 @@
 `ifndef SEVENSEG__SV
 `define SEVENSEG__SV
 module sevenseg (clk,segin,en,segout);
-  input bit [2:0]segin;
-  input bit en,clk;
-  output logic [6:0] segout;
+  bit [2:0]segin;
+  bit en,clk;
+  logic [6:0] segout;
  always @(posedge clk)
  begin
      if (en == 1) begin

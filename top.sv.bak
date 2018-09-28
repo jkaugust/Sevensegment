@@ -13,7 +13,7 @@ logic clk;
    #5ns clk=~clk;
   end
   segintf sntf(clk);
-  sevenseg svnsg(.clk(clk),.segin(segintf.segin),.en(segintf.en),.segout(segintf.segout));
+  sevenseg svnsg();
   test tst (sntf.TEST); 
 endmodule:top
  
