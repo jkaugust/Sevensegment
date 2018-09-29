@@ -11,7 +11,7 @@ class driver;
   mailbox drv2scb; 
   transactor tr;
   
-  function new(input mailbox gen2drv,mailbox drv2scb,output event drv2gen, virtual segintf.TEST vTEST);
+  function new(input mailbox gen2drv,mailbox drv2scb,input event drv2gen, virtual segintf.TEST vTEST);
   this.gen2drv = gen2drv;
   this.drv2gen=drv2gen;
   this.vTEST = vTEST;

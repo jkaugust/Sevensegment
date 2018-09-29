@@ -16,6 +16,7 @@ logic [6:0] segout;
  endclocking:cr
 modport TEST ( clocking cr, input clk);
 
+
 endinterface
 
 `endif // SEGINTF_SV

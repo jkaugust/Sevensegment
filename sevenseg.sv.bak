@@ -1,9 +1,10 @@
 `ifndef SEVENSEG__SV
 `define SEVENSEG__SV
 module sevenseg (clk,segin,en,segout);
-  bit [2:0]segin;
-  bit en,clk;
-  logic [6:0] segout;
+  input bit [2:0]segin;
+  input bit en,clk;
+  output logic [6:0] segout;
+  
  always @(posedge clk)
  begin
      if (en == 1) begin
@@ -23,6 +24,7 @@ module sevenseg (clk,segin,en,segout);
          segout <= 7'b0000010;
 	       end if  (segin== 3'b111) begin
          segout <= 7'b1111000;  
+         $display(" ERROR TEST ",segout);
          end        
        end
 else segout <= 'x; 

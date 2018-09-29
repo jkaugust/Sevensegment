@@ -3,6 +3,7 @@
 `ifndef TOP__SV
 `define TOP__SV
 
+
 module top;
 logic clk;
  initial begin
@@ -13,7 +14,7 @@ logic clk;
    #5ns clk=~clk;
   end
   segintf sntf(clk);
-  sevenseg svnsg(.clk(clk),.segin(segintf.segin),.en(segintf.en),.segout(segintf.segout));
+  sevenseg svnsg(.clk(clk),.segin(sntf.segin),.en(sntf.en),.segout(sntf.segout));
   test tst (sntf.TEST); 
 endmodule:top
  

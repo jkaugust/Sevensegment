@@ -4,6 +4,7 @@ module sevenseg (clk,segin,en,segout);
   input bit [2:0]segin;
   input bit en,clk;
   output logic [6:0] segout;
+  
  always @(posedge clk)
  begin
      if (en == 1) begin
@@ -26,6 +27,7 @@ module sevenseg (clk,segin,en,segout);
          end        
        end
 else segout <= 'x; 
+  $display(" ERROR TEST ",segout);
  end
 endmodule
 

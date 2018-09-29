@@ -24,7 +24,7 @@ class environment;
     /*configure cgf;
     scoreboard scb;
     coverage cov;*/
-    virtual segintf.TEST vTEST;
+    virtual segintf vTEST;
     
     extern function new(input virtual segintf.TEST vTEST);
     extern virtual function void build() ;
@@ -36,8 +36,8 @@ class environment;
 
  endclass : environment 
  
- function environment::new(input virtual segintf.TEST vTEST);
-   this.vTEST = vTEST;
+ function environment::new(input virtual segintf vif);
+   this.vif = vTEST;
   endfunction : new
 
 function void environment::build();
@@ -57,8 +57,8 @@ endfunction : build
 
 task environment::reset(); 
 $display(" %0d : Environment : start of reset() method",$time); 
-  //vTEST.cr.en <=0;
-  //vTEST.cr.segin <= 3'b0;
+  vTEST.TEST.cr.en <=0;
+  vTEST.TEST.cr.segin <= 3'b0;
 $display(" %0d : Environment : end of reset() method",$time); 
 endtask : reset 
 

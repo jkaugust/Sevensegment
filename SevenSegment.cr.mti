@@ -17,11 +17,13 @@ QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	--none--
 
-} {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/monitor.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/monitor.sv}
+} {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/test.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/test.sv}
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling package test_sv_unit
+-- Compiling program test
 
 Top level modules:
-	--none--
+	test
 
 } {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/segintf.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/segintf.sv}
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
@@ -30,13 +32,11 @@ QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	--none--
 
-} {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/test.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/test.sv}
+} {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/monitor.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/monitor.sv}
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
--- Compiling package test_sv_unit
--- Compiling program test
 
 Top level modules:
-	test
+	--none--
 
 } {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/transactor.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/transactor.sv}
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
@@ -57,13 +57,13 @@ QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 Top level modules:
 	--none--
 
-} {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/coverage.sv} {0 vlog\ -work\ work\ -vopt\ -sv\ \{C:/Users/JKA/Google\ Drive/Studying/System\ Verilog/SevenSeg/coverage.sv\}\nQuestaSim-64\ vlog\ 10.2c\ Compiler\ 2013.07\ Jul\ 19\ 2013\n**\ Error:\ C:/Users/JKA/Google\ Drive/Studying/System\ Verilog/SevenSeg/coverage.sv(6):\ Invalid\ type\ 'transactor'.\ Please\ check\ the\ type\ of\ the\ variable\ 'tr'.\n**\ Error:\ C:/Users/JKA/Google\ Drive/Studying/System\ Verilog/SevenSeg/coverage.sv(12):\ near\ \"length_kind\":\ syntax\ error,\ unexpected\ IDENTIFIER,\ expecting\ '\;'\ or\ '\{'\n\n {3.0 5.0} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/driver.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/driver.sv}
+} {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/driver.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/driver.sv}
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 
 Top level modules:
 	--none--
 
-} {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/environment.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/environment.sv}
+} {} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/coverage.sv} {0 vlog\ -work\ work\ -vopt\ -sv\ \{C:/Users/JKA/Google\ Drive/Studying/System\ Verilog/SevenSeg/coverage.sv\}\nQuestaSim-64\ vlog\ 10.2c\ Compiler\ 2013.07\ Jul\ 19\ 2013\n**\ Error:\ C:/Users/JKA/Google\ Drive/Studying/System\ Verilog/SevenSeg/coverage.sv(6):\ Invalid\ type\ 'transactor'.\ Please\ check\ the\ type\ of\ the\ variable\ 'tr'.\n**\ Error:\ C:/Users/JKA/Google\ Drive/Studying/System\ Verilog/SevenSeg/coverage.sv(12):\ near\ \"length_kind\":\ syntax\ error,\ unexpected\ IDENTIFIER,\ expecting\ '\;'\ or\ '\{'\n\n {3.0 5.0} {}} {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/environment.sv} {1 {vlog -work work -vopt -sv {C:/Users/JKA/Google Drive/Studying/System Verilog/SevenSeg/environment.sv}
 QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 
 Top level modules:

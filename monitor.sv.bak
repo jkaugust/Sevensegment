@@ -21,7 +21,7 @@ class monitor;
   
   task run();
     forever begin
-      wait(vTEST.cr.segout)
+      wait(vTEST.cr.segout);
       outrcv <= vTEST.cr.segout;
       $display(" ERROR TEST RECIEVER ",outrcv);
       $display(" %0d : Receiver : Received a segout %0d",$time,outrcv);
